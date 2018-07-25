@@ -1,5 +1,5 @@
 # weather-app
-App for showing current weather conditions locally and around the world
+Single page app for showing current weather conditions locally and around the world
 
 # Build Setup
 -install dependencies
