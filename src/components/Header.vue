@@ -1,50 +1,37 @@
 <template>
-  <div id="navbar">
-      <router-link to="/" exact><h1 id="heading">Weatherman</h1>
-      <img id="sun-logo" src="../assets/sun-logo.png" alt="sun logo"></router-link>
-      <router-link to="/world-weather/" exact><a class="nav-link" href="#">Around the World</a></router-link>
-      <router-link to="/" exact><a class="nav-link" href="#">Home</a></router-link>
+  <div class="navbar">
+      <router-link to="/" exact><h1 class="navbar__logo">Weatherman</h1>
+      <img class="navbar__logo-img" src="../assets/sun-logo.png" alt="sun logo"></router-link>
+      <router-link to="/world-weather/" exact><a class="navbar__link" href="#">Around the World</a></router-link>
+      <router-link to="/" exact><a class="navbar__link" href="#">Home</a></router-link>
   </div>
 </template>
 
-<script>
-
-export default {
-    mounted() {
-       
-    }
-}
-</script>
-
 <style scoped>
 
-#navbar {
+.navbar {
     width: 100%;
     height: 70px;
     background-color:#161738;
-    border-bottom: 2px solid #f7e860;
+    border-bottom: 3px solid #f7e860;
 }
 
-#heading {
+.navbar__logo {
     float: left;
     height: 100%;
     padding: 10px 5px 0 10px;
     text-transform: uppercase;
     color:#f7e860;
-}
-
-#heading:hover {
-    color:aliceblue;
     cursor: pointer;
 }
 
-#sun-logo {
+.navbar__logo-img {
     height: 100%;
     width: 50px;
     padding: 8px 0px 12px;
 }
 
-.nav-link {
+.navbar__link {
     display: block;
     height: 100%;
     width: 150px;
@@ -56,9 +43,10 @@ export default {
     color:#f7e860;
     padding: 20px;
     margin-top: 0;
+    transition: color 300ms;
 }
 
-.nav-link:hover {
+.navbar__link:hover {
     color:aliceblue;
     cursor: pointer;
     border-left: 2px solid #f7e860;
@@ -74,20 +62,20 @@ export default {
 
 @media screen and (max-width: 650px) {
     
-    #navbar {
+    .navbar {
         height: 50px;
     }
 
-    #heading {
+    .navbar__logo {
         display: none;
     }
 
-    #sun-logo {
+    .navbar__logo-img {
         width: 35px;
         margin-left: 5px;
     }
 
-    .nav-link {
+    .navbar__link {
         width: 120px;
         font-size: .7rem; 
         padding-top: 15px;
