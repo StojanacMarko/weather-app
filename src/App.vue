@@ -2,9 +2,7 @@
   <div>
     <Header />
     <vue-particles color="#f7e860" :particlesNumber="200" hoverMode="grab"></vue-particles>
-    <transition name="router-anim" enter-active-class="animated bounceInLeft">
-       <router-view></router-view>
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -35,19 +33,20 @@ export default {
 }
 
 body {
-    background-image: url('./assets/bckg-pic.jpeg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #f7e860;
-    font-family: 'Armata', sans-serif;
+  height: 100%;
+  background-image: url('./assets/bckg-pic.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #F59122;
+  font-family: 'Armata', sans-serif;
 }
 
 #particles-js {
-    position: absolute; 
-    background-size: cover; 
-    width: 100%;
-    height: 100vh; 
-    z-index: -1;
+  position: absolute; 
+  background-size: cover; 
+  width: 100%;
+  height: 100vh; 
+  z-index: -1;
 }
 </style>
